@@ -8,13 +8,13 @@ public class UImenu {
             "Septiembre", "Noviembre", "Diciembre" };
 
     public static void showMenu() {
-        System.out.println("Welcome to My Appointments");
+        System.out.println("Bienvenido a tus turnos medicos");
         System.out.println("Selecciona la opción deseada");
 
         int response = 0;
         do {
             System.out.println("1. Doctor");
-            System.out.println("2. Patient");
+            System.out.println("2. Paciente");
             System.out.println("0. Salir");
 
             Scanner sc = new Scanner(System.in);
@@ -30,10 +30,10 @@ public class UImenu {
 
                     break;
                 case 0:
-                    System.out.println("Thank you for you visit");
+                    System.out.println("Gracias por su visita.");
                     break;
                 default:
-                    System.out.println("Please select a correct answer");
+                    System.out.println("Seleccione la opcion correcta");
             }
         } while (response != 0);
     }
@@ -42,9 +42,9 @@ public class UImenu {
         int response = 0;
         do {
             System.out.println("\n\n");
-            System.out.println("Patient");
-            System.out.println("1. Book an appointment");
-            System.out.println("2. My appointments");
+            System.out.println("Paciente");
+            System.out.println("1. Historial de Turnos");
+            System.out.println("2. Mis Turnos");
             System.out.println("0. Return");
 
             Scanner sc = new Scanner(System.in);
@@ -52,13 +52,13 @@ public class UImenu {
 
             switch (response) {
                 case 1:
-                    System.out.println("::Book an appointment");
+                    System.out.println("::Historial de turnos");
                     for (int i = 1; i < 4; i++) {
                         System.out.println(i + ". " + MONTHS[i]);
                     }
                     break;
                 case 2:
-                    System.out.println("::My appointments");
+                    System.out.println("::Mis Turnos medicos");
                     break;
                 case 0:
                     showMenu();

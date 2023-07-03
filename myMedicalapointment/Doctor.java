@@ -3,7 +3,8 @@ package myMedicalapointment;
 public class Doctor {
     static int id = 0;
     String name;
-    String especiality;
+    String email;
+    String speciality;
 
     Doctor() {
         System.out.println("Construyendo el objeto Doctor");
@@ -14,8 +15,24 @@ public class Doctor {
         System.out.println("El nombre del Doctor asignado es : " + name);
         id++;
         this.name = name;
-        this.especiality = speciality;
+        this.speciality = speciality;
 
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEspeciality() {
+        return this.speciality;
+    }
+
+    public void setEspeciality(String especiality) {
+        this.speciality = especiality;
     }
 
     // comportamietos
