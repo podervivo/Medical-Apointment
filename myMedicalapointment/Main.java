@@ -7,7 +7,7 @@ import UI.UImenu;
 public class Main {
     public static void main(String[] args) {
 
-        // showMenu();
+        showMenu();
 
         Doctor myDoctor = new Doctor("Emiliano Garello", "Pediatra");
         System.out.println(myDoctor.name);
@@ -19,6 +19,12 @@ public class Main {
         System.out.println(patient.getName());
         System.out.println(patient.getHeight());
         System.out.println(patient.getWeight());
+
+        Patient patient2 = new Patient("Juan Perez", "juan@mail.com");
+        patient2.setAge(60);
+        patient2.getHeight(65.6);
+        patient2.setWeight(60.0);
+
     }
 
 }
