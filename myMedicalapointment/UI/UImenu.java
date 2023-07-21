@@ -1,4 +1,4 @@
-package UI;
+package myMedicalapointment.UI;
 
 import java.util.Scanner;
 
