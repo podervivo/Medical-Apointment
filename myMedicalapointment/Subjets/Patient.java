@@ -1,17 +1,17 @@
 package myMedicalapointment.Subjets;
 
-import myMedicalapointment.Dates.User;
+import myMedicalapointment.Data.User;
 
 public class Patient extends User {
+
+    public Patient(String name, String email) {
+        super(name, email);
+    }
 
     private String birthday;
     private Double weight;
     private Double height;
     private String bloodType;
-
-    Patient(String name, String email) {
-        super(name, email);
-    }
 
     public String getBirthday() {
         return this.birthday;
@@ -43,6 +43,12 @@ public class Patient extends User {
 
     public void setBloodType(String bloodType) {
         this.bloodType = bloodType;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n Age: " + birthday + "\nHeight: " + height + "\nweight: " + weight + getWeight()
+                + "\n Blood type   ";
     }
 
 }

@@ -1,4 +1,4 @@
-package myMedicalapointment.Dates;
+package myMedicalapointment.Data;
 
 public class User {
     private int id;
@@ -36,6 +36,14 @@ public class User {
         this.addres = addres;
     }
 
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -48,12 +56,8 @@ public class User {
         }
     }
 
-    public String getEmail() {
-        return this.email;
+    @Override
+    public String toString() {
+        return "User: " + name + ", Phone: " + phoneNumber + ", Email: " + email + ", \n Address: " + addres;
     }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
 }

@@ -5,6 +5,7 @@ import static myMedicalapointment.UI.UImenu.*;
 import java.util.Date;
 
 import myMedicalapointment.Subjets.Doctor;
+import myMedicalapointment.Subjets.Patient;
 import myMedicalapointment.UI.UImenu;
 
 public class Main {
@@ -17,25 +18,17 @@ public class Main {
         myDoctor.addTurnosDisponibles(new Date(), "2 pm");
         myDoctor.addTurnosDisponibles(new Date(), "4 pm");
 
+        System.out.println(myDoctor);
+
         // System.out.println(myDoctor.getTurnosDisponibles());
 
         for (Doctor.TurnosDisponibles tD : myDoctor.getTurnosDisponibles()) {
             System.out.println(tD.getDate() + " " + tD.getTime());
         }
 
-        /*
-         * Patient patient = new Patient("Ivana Gomes", "Ivana@mail.com");
-         * patient.setWeight(85.4);
-         * patient.setHeight(1.73);
-         * System.out.println(patient.getName());
-         * System.out.println(patient.getHeight());
-         * System.out.println(patient.getWeight());
-         * 
-         * Patient patient2 = new Patient("Juan Perez", "juan@mail.com");
-         * patient2.setAge(60);
-         * patient2.getHeight(65.6);
-         * patient2.setWeight(60.0);
-         */
+        Patient patient = new Patient("Ivana Gomez", "Ivana@mail.com");
+
+        System.out.println(patient);
 
     }
 

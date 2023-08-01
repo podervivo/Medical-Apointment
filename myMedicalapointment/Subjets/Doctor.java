@@ -2,7 +2,7 @@ package myMedicalapointment.Subjets;
 
 import java.util.Date;
 
-import myMedicalapointment.Dates.User;
+import myMedicalapointment.Data.User;
 
 import java.util.ArrayList;
 
@@ -24,8 +24,8 @@ public class Doctor extends User {
         return this.speciality;
     }
 
-    public void setEspeciality(String especiality) {
-        this.speciality = especiality;
+    public void setEspeciality(String speciality) {
+        this.speciality = speciality;
     }
 
     ArrayList<TurnosDisponibles> turnosDisponibles = new ArrayList<>();
@@ -36,6 +36,11 @@ public class Doctor extends User {
 
     public ArrayList<TurnosDisponibles> getTurnosDisponibles() {
         return turnosDisponibles;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n Especialidad: " + speciality + "\nDisponibles: " + turnosDisponibles.toString();
     }
 
     public static class TurnosDisponibles {
@@ -49,20 +54,25 @@ public class Doctor extends User {
             this.time = time;
         }
 
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
         public Date getDate() {
             return this.date;
         }
 
+        public void setDate(Date date) {
+            this.date = date;
+        }
+
         public String getTime() {
             return this.time;
+        }
+
+        public void setTime(String time) {
+            this.time = time;
+        }
+
+        @Override
+        public String toString() {
+            return "Turnos Disponibles \n Date: " + date + "\n Time: " + time;
         }
 
     }
